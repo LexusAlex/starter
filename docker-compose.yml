@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+    backend-nginx:
+        build:
+            context: infrastructure/backend/development/docker/nginx-debian-bullseye
+        ports:
+            - "80:80"
+        volumes:
+            - ./:/starter
+        depends_on:
+            - backend-php-fpm
+
+    backend-php-fpm:
+        build:
+            context: infrastructure/backend/development/docker/php-fpm-debian-bullseye
+        volumes:
+            - ./:/starter
+
+    backend-php-cli:
+        build:
+            context: infrastructure/backend/development/docker/php-cli-debian-bullseye
+        volumes:
+            - ./:/starter
