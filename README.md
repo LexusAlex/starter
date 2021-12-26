@@ -1,1 +1,9 @@
-Starter php
+# Starter php
+
+## Initialization
+
+```shell
+make init
+```
+
+
