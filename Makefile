@@ -1,4 +1,4 @@
-# полная инициализация всего проекта
+# полная инициализация всего проекта с нуля
 init: docker-down-clear docker-pull docker-build-pull docker-up
 # остановка проекта
 down: docker-down-clear
