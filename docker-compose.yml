@@ -21,3 +21,9 @@ services:
             context: infrastructure/backend/development/docker/php-cli-debian-bullseye
         volumes:
             - ./:/starter
+
+    frontend-nodejs-cli:
+        build:
+            context: infrastructure/frontend/development/docker/nodejs-cli-debian-bullseye
+        volumes:
+            - ./:/starter
