@@ -77,5 +77,16 @@ test/
 Локальная разработка - это докер
 Выкатка на прод - ansible
 
-2. Внедрение symfony-mailer
+Отдельная задача - выбор правильных пакетов
+Настройка окружения
+
+Задачи 
+1. twig
+2. Права доступа 
+3. Внедрение symfony-mailer
+
+Настройка инфраструктуры
+ansible
+
+создание файла на удаленном хосте ansible all -i inventory.ini -m ansible.builtin.file -a "path=/tmp/hello_world state=touch"
 
