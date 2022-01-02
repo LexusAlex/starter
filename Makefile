@@ -46,3 +46,7 @@ frontend-install-empty:
 	docker-compose run --rm frontend-nodejs-cli npm install --save-dev @babel/core @babel/preset-env @babel/register babel-loader browser-sync del gulp gulp-autoprefixer gulp-clean-css gulp-debug gulp-file-include gulp-group-css-media-queries gulp-htmlmin gulp-if gulp-plumber gulp-rename gulp-replace gulp-sass gulp-sourcemaps require-dir sass webpack webpack-stream yargs
 frontend-dev-start:
 	docker-compose run --rm -p 4000:4000 frontend-nodejs-cli npm run dev
+
+# Ansible
+ansible-ping:
+	ansible all -i infrastructure/backend/development/ansible/inventory.ini -u root -m ping
