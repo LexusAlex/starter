@@ -32,11 +32,18 @@ backend-init: backend-composer-install
 backend-composer-install:
 	docker-compose run --rm backend-php-cli composer install
 # выгрузить обновления
-backend-composer-install:
+backend-composer-autoload:
 	docker-compose run --rm backend-php-cli composer dump-autoload
+# проверка обновлений
+backend-composer-outdated:
+	docker-compose run --rm backend-php-cli composer outdated --direct
 # запуск тестов
 backend-test:
 	docker-compose run --rm backend-php-cli composer test
+# проверка версий ПО
+backend-check-version-soft:
+	docker-compose run --rm backend-php-cli bash -c 'php --version && composer --version'
+	docker exec -it starter_backend-nginx_1 nginx -v
 
 # Фронтенд
 # инициалиазация фронтенда
