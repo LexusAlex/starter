@@ -1,0 +1,19 @@
+{
+    "name": "lexusalex/starter",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lexusalex\\Starter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alexsey Shmelev",
+            "email": "alexsey_89@bk.ru"
+        }
+    ],
+    "require": {
+        "php": "8.0 | >= 8.1"
+    }
+}

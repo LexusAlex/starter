@@ -31,6 +31,9 @@ backend-init: backend-composer-install
 # установка зависимостей composer
 backend-composer-install:
 	docker-compose run --rm backend-php-cli composer install
+# выгрузить обновления
+backend-composer-install:
+	docker-compose run --rm backend-php-cli composer dump-autoload
 # запуск тестов
 backend-test:
 	docker-compose run --rm backend-php-cli composer test
