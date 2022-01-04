@@ -18,7 +18,7 @@
 ## Initialization
 
 ```shell
-make init # Сборка проекта с нуля
+make init # Сборка проекта с нуля с только что с клонированном репозитории
 ```
 
 ## Structure
@@ -30,3 +30,8 @@ make init # Сборка проекта с нуля
 **frontend**
 
 Блоки, html, css, gulp
+
+```shell
+make frontend-dev-start # запуск фронта для разработки
+make frontend-build # сборка фронта для деплоя и интерграции с сайтом
+```

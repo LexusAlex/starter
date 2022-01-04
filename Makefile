@@ -51,11 +51,17 @@ frontend-init: npm-install
 # загрузить зависимости из файла package-lock.json
 frontend-npm-install:
 	docker-compose run --rm frontend-nodejs-cli npm install
-# установка свежих версий пакетов с нуля для фронта
+frontend-check-update:
+	docker-compose run --rm frontend-nodejs-cli npm outdated
+# установка свежих всех зависимостей с нуля
 frontend-install-empty:
-	docker-compose run --rm frontend-nodejs-cli npm install --save-dev @babel/core @babel/preset-env @babel/register babel-loader browser-sync del gulp gulp-autoprefixer gulp-clean-css gulp-debug gulp-file-include gulp-group-css-media-queries gulp-htmlmin gulp-if gulp-plumber gulp-rename gulp-replace gulp-sass gulp-sourcemaps require-dir sass webpack webpack-stream yargs
+	docker-compose run --rm frontend-nodejs-cli npm install --save-dev @babel/core @babel/preset-env @babel/register babel-loader browser-sync del gulp gulp-autoprefixer gulp-clean-css gulp-debug gulp-file-include gulp-group-css-media-queries gulp-htmlmin gulp-if gulp-plumber gulp-rename gulp-replace gulp-sass gulp-sourcemaps require-dir sass webpack webpack-stream yargs bootstrap
+# сборка фронта для разработки
 frontend-dev-start:
 	docker-compose run --rm -p 4000:4000 frontend-nodejs-cli npm run dev
+# сборка продовской верстки
+frontend-build:
+	docker-compose run --rm -p 4000:4000 frontend-nodejs-cli npm run build
 
 # Ansible
 ansible-ping:

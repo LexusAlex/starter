@@ -15,13 +15,31 @@ const paths = {
       "./frontend/html/**/*.html",
     ]
   },
+  scss: {
+    src: "./frontend/scss/main.{scss,sass}",
+    dist: "./frontend/dist/css/",
+    watch: [
+      "./frontend/blocks/**/*.{scss,sass}",
+      "./frontend/scss/**/*.{scss,sass}"
+    ]
+  },
+  js: {
+    src: "./frontend/js/index.js",
+    dist: "./frontend/dist/js/",
+    watch: [
+      "./frontend/blocks/**/*.js",
+      "./frontend/js/**/*.js"
+    ]
+  },
 };
 
 requireDir("./frontend/gulp/");
 
 export { paths }
 
-export const development = gulp.series(gulp.parallel(["html"]), gulp.parallel("server"));
+export const development = gulp.series("clean",gulp.parallel(["html", "scss", "js"]), gulp.parallel("server"));
+
+export const prod = gulp.series("clean", gulp.parallel(["html", "scss", "js"]));
 
 //export const development = gulp.series("clean",
 //  gulp.parallel(["html", "scss", "js", "fonts"]),
