@@ -85,6 +85,8 @@ https://elisdn.ru/blog/142/structs-or-objects
 https://elisdn.ru/blog/148/dependency-injection
 https://elisdn.ru/blog/150/entity-dependencies
 
+для cli 
+https://github.com/wp-cli/php-cli-tools
 
 ### SOLID
 
