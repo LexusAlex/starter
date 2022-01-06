@@ -2,6 +2,9 @@
     "name": "lexusalex/starter",
     "type": "project",
     "license": "MIT",
+    "config": {
+        "sort-packages": true
+    },
     "autoload": {
         "psr-4": {
             "Lexusalex\\Starter\\": "src/"
@@ -14,6 +17,12 @@
         }
     ],
     "require": {
-        "php": "8.0 | >= 8.1"
+        "php": ">= 8.0.0 || >= 8.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "test": "phpunit --colors=always"
     }
 }

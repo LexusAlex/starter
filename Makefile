@@ -1,6 +1,6 @@
 # Проект
 # полная инициализация всего проекта с нуля
-init: docker-down-clear docker-pull docker-build-pull docker-up
+init: docker-down-clear docker-pull docker-build-pull docker-up application-init
 # остановка проекта
 down: docker-down-clear
 # запуск проекта
@@ -24,6 +24,8 @@ docker-build:
 # скачать образы и собрать образы
 docker-build-pull:
 	docker-compose build --pull
+# инициализация всего приложения
+application-init: backend-init
 
 # Бэкенд
 # инициализация бекенда
@@ -40,13 +42,13 @@ backend-composer-outdated:
 # запуск тестов
 backend-test:
 	docker-compose run --rm backend-php-cli composer test
-# проверка версий ПО
+# проверка версий ПО docker
 backend-check-version-soft:
 	docker-compose run --rm backend-php-cli bash -c 'php --version && composer --version'
 	docker exec -it starter_backend-nginx_1 nginx -v
 
 # Фронтенд
-# инициалиазация фронтенда
+# инициалиазация фронтенда, нужно только в dev окружении
 frontend-init: npm-install
 # загрузить зависимости из файла package-lock.json
 frontend-npm-install:
