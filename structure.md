@@ -88,6 +88,8 @@ https://elisdn.ru/blog/150/entity-dependencies
 для cli 
 https://github.com/wp-cli/php-cli-tools
 
+Webmozart\Assert\Assert - удобная библиотека для проверки значений
+
 ### SOLID
 
 https://www.youtube.com/watch?v=TxZwqVTaCmA
@@ -103,6 +105,12 @@ https://www.youtube.com/watch?v=TxZwqVTaCmA
 - Проработка требований
 - Приложение 12 факторов
 - внедрение deptrac https://github.com/qossmic/deptrac - контроль зависимостей проекта
+- При проектировании полность описать ТЗ
+  
+  - Например у сущности должны быть реализованы операции add, remove, update, delete
+  - подробнее в статье https://elisdn.ru/blog/142/structs-or-objects
+  - Полноценные объекты мы чаще всего будем называть доменными сущностями, агрегатами или объектами-значениями. А служебные процедуры и функции, оказывающие какие-то услуги, мы и будем называть сервисами.
+  - Возможно нужно создавать вспомогательные объекты для сохранения структур в бд.
 
 ## Материалы
 
@@ -121,4 +129,10 @@ css здесь используем scss файлы подключаем в main
 собираем блоками по бэм
 
 js собирается похожим образом, подключаем все в один файл main.js
+
+### Сетка 
+
+Используем bootstap5 и не парим мозг, но используем с умом
+Плейлист по которому правильно делать
+https://www.youtube.com/watch?v=v5mXg3yVY8E&list=PLU0nVsJXPyy_nzjcojRdasNJQvlJzocjz
 
