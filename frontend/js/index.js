@@ -1,5 +1,4 @@
-//import "./import";
-
-window.onload = function(){
-    // Здесь код приложения
-};
+//import "./import/bootsrap";
+document.addEventListener("DOMContentLoaded", function() {
+  console.log('load');
+})

@@ -12,6 +12,6 @@ gulp.task("server", () => {
     });
 
     gulp.watch(paths.html.watch, gulp.parallel("html"));
-    //gulp.watch(paths.css.watch, gulp.parallel("scss"));
-    //gulp.watch(paths.js.watch, gulp.parallel("js"));
+    gulp.watch(paths.scss.watch, gulp.parallel("scss"));
+    gulp.watch(paths.js.watch, gulp.parallel("js"));
 });

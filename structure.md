@@ -130,9 +130,14 @@ css здесь используем scss файлы подключаем в main
 
 js собирается похожим образом, подключаем все в один файл main.js
 
+Цель - разобраться как работает bootstap 5
 ### Сетка 
 
 Используем bootstap5 и не парим мозг, но используем с умом
 Плейлист по которому правильно делать
 https://www.youtube.com/watch?v=v5mXg3yVY8E&list=PLU0nVsJXPyy_nzjcojRdasNJQvlJzocjz
+
+### Шрифт
+
+Montserrat
 
