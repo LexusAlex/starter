@@ -54,7 +54,7 @@ frontend-init: npm-install
 frontend-npm-install:
 	docker-compose run --rm frontend-nodejs-cli npm install
 frontend-check-update:
-	docker-compose run --rm frontend-nodejs-cli npm outdated
+	docker-compose run --rm frontend-nodejs-cli npm outdated --depth=0
 # установка свежих всех зависимостей с нуля
 frontend-install-empty:
 	docker-compose run --rm frontend-nodejs-cli npm install --save-dev @babel/core @babel/preset-env @babel/register babel-loader browser-sync del gulp gulp-autoprefixer gulp-clean-css gulp-debug gulp-file-include gulp-group-css-media-queries gulp-htmlmin gulp-if gulp-plumber gulp-rename gulp-replace gulp-sass gulp-sourcemaps require-dir sass webpack webpack-stream yargs bootstrap
