@@ -116,6 +116,10 @@ https://www.youtube.com/watch?v=TxZwqVTaCmA
 
 создание файла на удаленном хосте ansible all -i inventory.ini -m ansible.builtin.file -a "path=/tmp/hello_world state=touch"
 
+## Базы данных
+
+Для dev используем mysql и postgres
+
 ## Фронтенд
 
 По большому счету фронтенд собирается локально, самиv рендером будет заниматься php
@@ -130,12 +134,13 @@ css здесь используем scss файлы подключаем в main
 
 js собирается похожим образом, подключаем все в один файл main.js
 
-Цель - разобраться как работает bootstap 5
 ### Сетка 
 
 Используем bootstap5 и не парим мозг, но используем с умом
 Плейлист по которому правильно делать
 https://www.youtube.com/watch?v=v5mXg3yVY8E&list=PLU0nVsJXPyy_nzjcojRdasNJQvlJzocjz
+
+Принимаем решение подключать фронтенд просто файликами, дабы не тратить время на разбор как и что правильно подключать.
 
 ### Шрифт
 

@@ -22,8 +22,38 @@ services:
         volumes:
             - ./:/starter
 
+    backend-mysql:
+        image: mysql:8.0
+        environment:
+            MYSQL_USER: starter
+            MYSQL_PASSWORD: starter
+            MYSQL_ROOT_PASSWORD: starter
+            MYSQL_DATABASE: starter
+        volumes:
+            - mysql:/var/lib/mysql
+        ports:
+            - "3306:3306"
+        profiles:
+            -   db
+
+    backend-postgres:
+        image: postgres:14
+        environment:
+            POSTGRES_USER: starter
+            POSTGRES_PASSWORD: starter
+            POSTGRES_DB: starter
+        volumes:
+            - postgres:/var/lib/postgresql/data
+        ports:
+            - "54321:5432"
+        profiles:
+            -   db
+
     frontend-nodejs-cli:
         build:
             context: infrastructure/frontend/development/docker/nodejs-cli-debian-bullseye
         volumes:
             - ./:/starter
+volumes:
+    mysql:
+    postgres:

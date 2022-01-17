@@ -6,6 +6,9 @@ down: docker-down-clear
 # запуск проекта
 docker-up:
 	docker-compose up -d
+# запуск проекта с базами данных
+docker-up-db:
+	docker-compose --profile db up -d
 # остановить контейнеры поднятые командой docker-compose up
 docker-down:
 	docker-compose down --remove-orphans
