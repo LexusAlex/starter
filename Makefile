@@ -2,7 +2,7 @@
 # полная инициализация всего проекта с нуля
 init: docker-down-clear docker-pull docker-build-pull docker-up application-init
 # остановка проекта
-down: docker-down-clear
+# down: docker-down-clear
 # запуск проекта
 docker-up:
 	docker-compose up -d
