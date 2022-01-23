@@ -34,7 +34,8 @@ services:
         ports:
             - "3306:3306"
         profiles:
-            -   db
+            - db
+            - mysql
 
     backend-postgres:
         image: postgres:14
@@ -47,7 +48,8 @@ services:
         ports:
             - "54321:5432"
         profiles:
-            -   db
+            - db
+            - postgres
 
     frontend-nodejs-cli:
         build:

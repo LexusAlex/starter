@@ -1,12 +1,18 @@
 # Проект
 # полная инициализация всего проекта с нуля
-init: docker-down-clear docker-pull docker-build-pull docker-up application-init
+init: docker-down-clear docker-pull docker-build-pull docker-up-mysql application-init
 # остановка проекта
 # down: docker-down-clear
-# запуск проекта
+# запуск проекта без баз данных
 docker-up:
 	docker-compose up -d
-# запуск проекта с базами данных
+# запуск проекта c mysql
+docker-up-mysql:
+	docker-compose --profile mysql up -d
+# запуск проекта c postgres
+docker-up-postgres:
+	docker-compose --profile postgres up -d
+# запуск проекта с двумя базами данных
 docker-up-db:
 	docker-compose --profile db up -d
 # остановить контейнеры поднятые командой docker-compose up
@@ -49,6 +55,7 @@ backend-test:
 backend-check-version-soft:
 	docker-compose run --rm backend-php-cli bash -c 'php --version && composer --version'
 	docker exec -it starter_backend-nginx_1 nginx -v
+	docker exec -it starter_backend-mysql_1 mysql -V
 
 # Фронтенд
 # инициалиазация фронтенда, нужно только в dev окружении

@@ -103,9 +103,10 @@ https://www.youtube.com/watch?v=TxZwqVTaCmA
 - ansible
 - Отдельная задача - выбор правильных пакетов
 - Проработка требований
-- Приложение 12 факторов
+- ~~Приложение 12 факторов~~
 - внедрение deptrac https://github.com/qossmic/deptrac - контроль зависимостей проекта
 - При проектировании полность описать ТЗ
+- рассмотреть использование Memcached и Redis.
   
   - Например у сущности должны быть реализованы операции add, remove, update, delete
   - подробнее в статье https://elisdn.ru/blog/142/structs-or-objects
@@ -145,4 +146,6 @@ https://www.youtube.com/watch?v=v5mXg3yVY8E&list=PLU0nVsJXPyy_nzjcojRdasNJQvlJzo
 ### Шрифт
 
 Montserrat
+
+https://getbootstrap.su/docs/5.0/examples/
 
