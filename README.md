@@ -34,7 +34,10 @@
 
 ```shell
 make init # Сборка проекта с нуля для разработки сюда входит: удаление всех контейнеров и томов из предыдущего состояния, скачивание образов, сборка образов, запуск приложения с бд mysql, запуск приложения
+make docker-up # поднять контейнеры без бд
 make docker-up-mysql # поднять контейнеры с бд mysql
+make docker-up-postgres # поднять контейнеры с бд postgres
+make docker-up-db # поднять контейнер со всеми базами данных
 make docker-down # остановить контейнеры
 make backend-composer-outdated # проверить обновления для пакетов composer
 make backend-check-version-soft # версии ПО запущенного в docker контейнере

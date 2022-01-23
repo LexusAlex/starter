@@ -121,6 +121,13 @@ https://www.youtube.com/watch?v=TxZwqVTaCmA
 
 Для dev используем mysql и postgres
 
+mysql название бд = postgres название схемы
+
+### Doctrine ORM
+
+https://deworker.pro/edu/series/interactive-site/db-and-orm
+https://elisdn.ru/blog/108/domain-entities-doctrine
+
 ## Фронтенд
 
 По большому счету фронтенд собирается локально, самиv рендером будет заниматься php
