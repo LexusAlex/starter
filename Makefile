@@ -56,6 +56,7 @@ backend-check-version-soft:
 	docker-compose run --rm backend-php-cli bash -c 'php --version && composer --version'
 	docker exec -it starter_backend-nginx_1 nginx -v
 	docker exec -it starter_backend-mysql_1 mysql -V
+	docker exec -it starter_backend-postgres_1 postgres -V
 
 # Фронтенд
 # инициалиазация фронтенда, нужно только в dev окружении

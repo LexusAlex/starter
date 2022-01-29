@@ -20,8 +20,8 @@
 ### production
 
 - php 8.1.2 [https://github.com/php/php-src/tags](https://github.com/php/php-src/tags)
-- composer 2.2.4 [https://github.com/composer/composer/tags](https://github.com/composer/composer/tags)
-- nginx 1.21.5 [https://github.com/nginx/nginx/tags](https://github.com/nginx/nginx/tags)
+- composer 2.2.5 [https://github.com/composer/composer/tags](https://github.com/composer/composer/tags)
+- nginx 1.21.6 [https://github.com/nginx/nginx/tags](https://github.com/nginx/nginx/tags)
 - mysql 8.0.27 [https://github.com/mysql/mysql-server/tags](https://github.com/mysql/mysql-server/tags)
 
 ### development
