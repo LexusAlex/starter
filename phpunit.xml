@@ -14,5 +14,8 @@
         <testsuite name="default">
             <directory>tests</directory>
         </testsuite>
+        <testsuite name="components">
+            <directory>tests/Components</directory>
+        </testsuite>
     </testsuites>
 </phpunit>

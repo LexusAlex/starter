@@ -123,6 +123,12 @@ https://www.youtube.com/watch?v=TxZwqVTaCmA
 
 mysql название бд = postgres название схемы
 
+### https://github.com/symfony/mailer
+
+docker-compose run --rm backend-php-cli composer require symfony/mailer
+
+Тестируем отдельно
+
 ### Doctrine ORM
 
 https://deworker.pro/edu/series/interactive-site/db-and-orm

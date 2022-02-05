@@ -13,12 +13,28 @@ services:
     backend-php-fpm:
         build:
             context: infrastructure/backend/development/docker/php-fpm-debian-bullseye
+        environment:
+            MAILER_HOST: backend-mailer
+            MAILER_PORT: 1025
+            MAILER_USERNAME: alex
+            MAILER_PASSWORD: 123
+            MAILER_ENCRYPTION: tcp
+            MAILER_FROM_EMAIL: mail@app.test
+            MAILER_FROM_NAME: test
         volumes:
             - ./:/starter
 
     backend-php-cli:
         build:
             context: infrastructure/backend/development/docker/php-cli-debian-bullseye
+        environment:
+            MAILER_HOST: backend-mailer
+            MAILER_PORT: 1025
+            MAILER_USERNAME: alex
+            MAILER_PASSWORD: 123
+            MAILER_ENCRYPTION: tcp
+            MAILER_FROM_EMAIL: mail@app.test
+            MAILER_FROM_NAME: test
         volumes:
             - ./:/starter
 
@@ -50,6 +66,12 @@ services:
         profiles:
             - db
             - postgres
+
+    backend-mailer:
+        image: mailhog/mailhog
+        ports:
+            - "1025:1025"
+            - "8025:8025"
 
     frontend-nodejs-cli:
         build:
