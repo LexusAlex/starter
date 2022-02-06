@@ -31,15 +31,28 @@ const paths = {
       "./frontend/js/**/*.js"
     ]
   },
+  images: {
+    src: [
+      "./frontend/images/**/*.{jpg,jpeg,png,gif,tiff,svg}",
+      "!./frontend/images/favicon/*.{jpg,jpeg,png,gif,tiff}"
+    ],
+    dist: "./frontend/dist/images/",
+    watch: "./frontend/images/**/*.{jpg,jpeg,png,gif,svg,tiff}"
+  },
+  fonts: {
+    src: "./frontend/fonts/**/*.{woff,woff2}",
+    dist: "./frontend/dist/css/fonts/",
+    watch: "./frontend/fonts/**/*.{woff,woff2}"
+  },
 };
 
 requireDir("./frontend/gulp/");
 
 export { paths }
 
-export const development = gulp.series("clean",gulp.parallel(["html", "scss", "js"]), gulp.parallel("server"));
+export const development = gulp.series("clean",gulp.parallel(["html", "scss", "js", "images", "fonts"]), gulp.parallel("server"));
 
-export const prod = gulp.series("clean", gulp.parallel(["html", "scss", "js"]));
+export const prod = gulp.series("clean", gulp.parallel(["html", "scss", "js", "images", "fonts"]));
 
 //export const development = gulp.series("clean",
 //  gulp.parallel(["html", "scss", "js", "fonts"]),

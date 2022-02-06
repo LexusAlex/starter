@@ -148,6 +148,10 @@ css здесь используем scss файлы подключаем в main
 
 js собирается похожим образом, подключаем все в один файл main.js
 
+Картинки
+
+docker-compose run --rm frontend-nodejs-cli npm install --save-dev gulp-imagemin imagemin-pngquant imagemin-zopfli imagemin-mozjpeg imagemin-giflossy gulp-newer
+docker-compose run --rm frontend-nodejs-cli npm install --save-dev bootstrap-icons
 ### Сетка 
 
 Используем bootstap5 и не парим мозг, но используем с умом
