@@ -44,6 +44,7 @@
     "gulp-replace": "^1.1.3",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "normalize.css": "^8.0.1",
     "require-dir": "^1.2.0",
     "sass": "^1.45.2",
     "webpack": "^5.65.0",

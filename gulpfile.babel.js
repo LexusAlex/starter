@@ -33,11 +33,11 @@ const paths = {
   },
   images: {
     src: [
-      "./frontend/images/**/*.{jpg,jpeg,png,gif,tiff,svg}",
-      "!./frontend/images/favicon/*.{jpg,jpeg,png,gif,tiff}"
+      "./frontend/images/**/*.{jpg,jpeg,png,gif,tiff,svg,webp}",
+      "!./frontend/images/favicon/*.{jpg,jpeg,png,gif,tiff,webp}"
     ],
     dist: "./frontend/dist/images/",
-    watch: "./frontend/images/**/*.{jpg,jpeg,png,gif,svg,tiff}"
+    watch: "./frontend/images/**/*.{jpg,jpeg,png,gif,svg,tiff,webp}"
   },
   fonts: {
     src: "./frontend/fonts/**/*.{woff,woff2}",

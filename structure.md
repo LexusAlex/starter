@@ -152,6 +152,7 @@ js собирается похожим образом, подключаем вс
 
 docker-compose run --rm frontend-nodejs-cli npm install --save-dev gulp-imagemin imagemin-pngquant imagemin-zopfli imagemin-mozjpeg imagemin-giflossy gulp-newer
 docker-compose run --rm frontend-nodejs-cli npm install --save-dev bootstrap-icons
+docker-compose run --rm frontend-nodejs-cli npm install --save-dev normalize.css
 ### Сетка 
 
 Используем bootstap5 и не парим мозг, но используем с умом
