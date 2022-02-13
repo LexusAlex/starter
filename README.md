@@ -8,7 +8,7 @@
 4. Каждая различная сторонняя служба является ресурсом например mysql, rabbitmq.
 5. Собираем, релизим, деплоем. Если изменения залиты в прод, то запрещено их править напрямую, для этого делаем hotfix.
 6. Разовые процессы администрирования должны запускаться на уровне релиза например `db.php migrate`.
-7. При инициализации проекта всегда используем `composer install` тем самым у нас всегда рабочая протестированная версия приложения.
+**7. При инициализации проекта всегда используем `composer install` тем самым у нас всегда рабочая протестированная версия приложения.**
 8. Для локальной разработки все должно быть упаковано в докер.На прод выкладываем с помощью ansible
 9. Своевременное обновление ПО, внимательно следим за этим, dev (docker), prod (ansible).
 10. Пишем и фронтенд и бекенд в одном приложении.
@@ -20,13 +20,13 @@
 ### production
 
 - php 8.1.2 [https://github.com/php/php-src/tags](https://github.com/php/php-src/tags)
-- composer 2.2.5 [https://github.com/composer/composer/tags](https://github.com/composer/composer/tags)
+- composer 2.2.6 [https://github.com/composer/composer/tags](https://github.com/composer/composer/tags)
 - nginx 1.21.6 [https://github.com/nginx/nginx/tags](https://github.com/nginx/nginx/tags)
 - mysql 8.0.28 [https://github.com/mysql/mysql-server/tags](https://github.com/mysql/mysql-server/tags)
 
 ### development
 
-- postgresql 14.1 [https://github.com/postgres/postgres/tags](https://github.com/postgres/postgres/tags)
+- postgresql 14.2 [https://github.com/postgres/postgres/tags](https://github.com/postgres/postgres/tags)
 
 ## Initialization| commands
 
