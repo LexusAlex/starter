@@ -21,6 +21,17 @@ services:
             MAILER_ENCRYPTION: tcp
             MAILER_FROM_EMAIL: mail@app.test
             MAILER_FROM_NAME: test
+            DB: mysql
+            MYSQL_HOST: backend-mysql
+            MYSQL_USER: starter
+            MYSQL_PASSWORD: starter
+            MYSQL_DATABASE: starter
+            MYSQL_CHARSET: utf8
+            POSTGRES_HOST: backend-postgres
+            POSTGRES_USER: starter
+            POSTGRES_PASSWORD: starter
+            POSTGRES_DB: starter
+            POSTGRES_CHARSET: utf-8
         volumes:
             - ./:/starter
 
@@ -35,6 +46,17 @@ services:
             MAILER_ENCRYPTION: tcp
             MAILER_FROM_EMAIL: mail@app.test
             MAILER_FROM_NAME: test
+            DB: mysql
+            MYSQL_HOST: backend-mysql
+            MYSQL_USER: starter
+            MYSQL_PASSWORD: starter
+            MYSQL_DATABASE: starter
+            MYSQL_CHARSET: utf8
+            POSTGRES_HOST: backend-postgres
+            POSTGRES_USER: starter
+            POSTGRES_PASSWORD: starter
+            POSTGRES_DB: starter
+            POSTGRES_CHARSET: utf-8
         volumes:
             - ./:/starter
 

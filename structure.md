@@ -133,6 +133,12 @@ docker-compose run --rm backend-php-cli composer require symfony/mailer
 
 https://deworker.pro/edu/series/interactive-site/db-and-orm
 https://elisdn.ru/blog/108/domain-entities-doctrine
+https://qna.habr.com/q/9097
+https://www.doctrine-project.org/
+
+
+docker-compose run --rm backend-php-cli composer require doctrine/orm
+docker-compose run --rm backend-php-cli composer require symfony/cache
 
 ## Фронтенд
 
