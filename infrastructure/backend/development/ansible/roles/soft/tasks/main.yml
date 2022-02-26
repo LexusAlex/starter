@@ -1,0 +1,34 @@
+---
+- name: php 8.1
+  block:
+      - name: apt signing key php 8.1
+        apt_key:
+            url: https://packages.sury.org/php/apt.gpg
+            state: present
+        tags: php-key
+      - name: add apt repository php 8.1
+        apt_repository:
+            repo: deb https://packages.sury.org/php/ bullseye main
+            update_cache: yes
+        tags: php-repo
+      - name: install php 8.1
+        apt:
+            name: "{{ packages }}"
+            state: latest
+        vars:
+            packages:
+                - php8.1-cli
+        tags: php-install
+        debugger: on_failed
+  tags: php
+
+- name: composer
+  block:
+      - name: download composer
+        get_url:
+            url: https://getcomposer.org/installer
+            dest: /tmp/installer
+      - name: install composer
+        shell: cat /tmp/installer | php -- --install-dir=/bin --filename=composer --quiet
+  debugger: on_failed
+  tags: composer

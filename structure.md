@@ -177,3 +177,24 @@ https://getbootstrap.su/docs/5.0/examples/
 
 1. login
 
+### Выкладка
+
+Роли
+
+deploy
+application
+
+общий тег для исполнения всего
+отдельный тег для каждого сервиса
+Каждый функционал отдельный сервис
+
+На сервак поставить
+apt install python3
+
+Добавить ssh ключи сервера на свою локальную машину с которой осуществлять выкладку
+
+Устанавливаем ровно то, что нужно
+composer запускать от пользователя deploy,  не выполняем от пользовате root
+
+https://github.com/AlariCode/ansible-demo/blob/master/roles/preconfig/tasks/main.yml
+

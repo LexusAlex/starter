@@ -1,0 +1,30 @@
+---
+- name: Update packages cache
+  apt:
+      update_cache: yes
+  debugger: on_failed
+  tags:
+      - update
+
+- name: Upgrade packages
+  apt:
+      upgrade: dist
+  debugger: on_failed
+  tags:
+      - upgrade
+
+- name: Remove usseles package
+  apt:
+      autoclean: yes
+  debugger: on_failed
+  tags:
+      - remove
+
+- name: Install Soft
+  apt:
+      name: "{{ packages }}"
+  vars:
+      packages:
+          - gnupg2
+  tags:
+      install-preconfig-soft
