@@ -200,6 +200,8 @@ https://github.com/AlariCode/ansible-demo/blob/master/roles/preconfig/tasks/main
 
 при запуске ansible проверяем что задачи выполняются идемпотентно, то есть повторный запуск не приведет к повторному выполнению задачи
 
+https://rtfm.co.ua/ansible-primer-ustanovki-nginx/
+
 #### Написано
 
 1. preconfig
