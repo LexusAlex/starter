@@ -26,5 +26,6 @@
   vars:
       packages:
           - gnupg2
+          - curl
   tags:
       install-preconfig-soft
