@@ -18,6 +18,7 @@
         vars:
             packages:
                 - php8.1-cli
+                - php8.1-fpm
         tags: php-install
         debugger: on_failed
   tags: php
@@ -31,3 +32,29 @@
         #shell: /tmp/installer | php -- --install-dir=/bin --filename=composer --quiet
   debugger: on_failed
   tags: composer
+
+- name: nginx
+  block:
+      - name: added PGP-key
+        apt_key:
+            url: https://nginx.org/keys/nginx_signing.key
+            state: present
+        tags: nginx-key
+      - name: add repo nginx
+        apt_repository:
+            repo: deb https://nginx.org/packages/mainline/debian/ bullseye nginx
+            state: present
+      - name: add repo nginx src
+        apt_repository:
+            repo: deb-src https://nginx.org/packages/mainline/debian/ bullseye nginx
+            state: present
+      - name: install nginx
+        apt:
+            name: nginx
+            update_cache: yes
+            state: present
+      - name: start nginx
+        service:
+            name: nginx
+            state: started
+  tags: nginx
