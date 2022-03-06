@@ -181,8 +181,10 @@ https://getbootstrap.su/docs/5.0/examples/
 
 Роли
 
+preconfig
 deploy
 application
+soft
 
 общий тег для исполнения всего
 отдельный тег для каждого сервиса
@@ -196,7 +198,11 @@ apt install python3
 Устанавливаем ровно то, что нужно
 composer запускать от пользователя deploy,  не выполняем от пользовате root
 
+проект будет находится в var/www/starter
+
 https://github.com/AlariCode/ansible-demo/blob/master/roles/preconfig/tasks/main.yml
+
+https://github.com/LexusAlex/slim-prototype/blob/main/infrastructure/production/ansible/roles/nginx/tasks/main.yml
 
 при запуске ansible проверяем что задачи выполняются идемпотентно, то есть повторный запуск не приведет к повторному выполнению задачи
 
@@ -212,4 +218,5 @@ https://rtfm.co.ua/ansible-primer-ustanovki-nginx/
    1. Установка php
    2. Установка composer
    3. Установка nginx
+   4. Добавлены конфиги nginx
 

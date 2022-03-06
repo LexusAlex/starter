@@ -57,4 +57,14 @@
         service:
             name: nginx
             state: started
+      - name: replace nginx configuration
+        template:
+            src: '{{ item.src }}'
+            dest: '{{ item.dest }}'
+        loop:
+            - { src: 'templates/nginx/default.conf', dest: '/etc/nginx/conf.d/default.conf' }
+            - { src: 'templates/nginx/nginx.conf', dest: '/etc/nginx/nginx.conf' }
+        notify: reload nginx
+        tags: replace-nginx
+  debugger: on_failed
   tags: nginx
