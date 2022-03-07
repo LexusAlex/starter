@@ -27,5 +27,6 @@
       packages:
           - gnupg2
           - curl
+          - git
   tags:
       install-preconfig-soft

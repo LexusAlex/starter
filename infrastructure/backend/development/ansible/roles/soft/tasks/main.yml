@@ -33,6 +33,35 @@
   debugger: on_failed
   tags: composer
 
+- name: project
+  block:
+      - name: added system user
+        ansible.builtin.user:
+            name: starter
+            comment: Starter
+            uid: 1001
+            groups: www-data
+            append: yes
+        tags: add-user
+      - name: creates directory
+        file:
+            path: /var/www/starter
+            state: directory
+            owner: starter
+            recurse: yes
+            group: starter
+        tags: create-directory
+      - name: git clone
+        ansible.builtin.git:
+            repo: https://github.com/LexusAlex/starter.git
+            dest: /var/www/starter
+            update: no
+        become: yes
+        become_user: starter
+        tags: git-clone
+  debugger: on_failed
+  tags: project
+
 - name: nginx
   block:
       - name: added PGP-key
