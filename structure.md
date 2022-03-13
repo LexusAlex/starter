@@ -208,6 +208,13 @@ https://github.com/LexusAlex/slim-prototype/blob/main/infrastructure/production/
 
 https://rtfm.co.ua/ansible-primer-ustanovki-nginx/
 
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
+
+Нерешенные проблемы:
+
+- при последующих накатывании проекта директория обновляется при команде git clone
+
 #### Написано
 
 1. preconfig

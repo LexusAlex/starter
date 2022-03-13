@@ -97,3 +97,58 @@
         tags: replace-nginx
   debugger: on_failed
   tags: nginx
+
+- name: mysql
+  block:
+      - name : add apt key
+        apt_key:
+            keyserver: keyserver.ubuntu.com
+            id: 467B942D3A79BD29
+        tags: mysql-key
+      - name: add repository mysql
+        apt_repository:
+            repo: deb http://repo.mysql.com/apt/debian/ bullseye mysql-8.0 main
+            update_cache: yes
+        tags: mysql-repo
+      - name: install mysql server
+        apt:
+            name: mysql-server
+            update_cache: yes
+            state: latest
+        tags: mysql-install
+      - name: module mysql-python install
+        apt:
+            name: python3-mysqldb
+            state: latest
+        tags: mysql-deps
+      - name: add my.cnf
+        template:
+            src: "mysql/.my.cnf"
+            dest: "/root/.my.cnf"
+            owner: root
+            group: root
+            mode: 0600
+        tags: mysql-conf
+      - name: mysql set root password
+        mysql_user:
+            check_implicit_admin: yes
+            name: 'root'
+            password: '{{ mysql_root_password }}'
+            host: 'localhost'
+            priv: '*.*:ALL,GRANT'
+        tags: mysql-change-root
+      - name: create application user
+        mysql_user:
+            state: present
+            name: '{{ mysql_application_user }}'
+            password: '{{ mysql_application_password }}'
+            priv:
+                '{{ mysql_application_db }}.*:ALL,GRANT'
+        tags: mysql_app_user
+      - name: create databse
+        mysql_db:
+            name: '{{ mysql_application_db }}'
+            state: present
+        tags: mysql_app_db
+  debugger: on_failed
+  tags: mysql

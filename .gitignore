@@ -1,3 +1,4 @@
 node_modules
 frontend/dist
 /vendor/
+/infrastructure/backend/development/ansible/roles/soft/vars/*
