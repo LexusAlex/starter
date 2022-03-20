@@ -9,8 +9,10 @@
       - name: add apt repository php 8.1
         apt_repository:
             repo: deb https://packages.sury.org/php/ bullseye main
-            update_cache: yes
         tags: php-repo
+      - name: update cache
+        apt:
+            update_cache: yes
       - name: install php 8.1
         apt:
             name: "{{ packages }}"
@@ -19,12 +21,17 @@
             packages:
                 - php8.1-cli
                 - php8.1-fpm
+                - php8.1-zip
         tags: php-install
         debugger: on_failed
   tags: php
 
 - name: composer
   block:
+      - name: remove composer
+        file:
+            path: /bin/composer
+            state: absent
       - name: install composer
         shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/bin --filename=composer
         args:
@@ -152,3 +159,24 @@
         tags: mysql_app_db
   debugger: on_failed
   tags: mysql
+
+- name: deploy
+  block:
+      - name: git pull latest changes
+        become: yes
+        become_user: starter
+        shell: git pull origin main
+        args:
+            chdir: "/var/www/starter/"
+      - name: composer install
+        become: yes
+        become_user: starter
+        shell: composer install --no-dev
+        args:
+            chdir: "/var/www/starter/"
+      #  register: out
+      #- debug:
+            #msg: "{{ out.stdout }}"
+      #      var: out
+  debugger: on_failed
+  tags: deploy

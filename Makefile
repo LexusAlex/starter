@@ -57,8 +57,8 @@ backend-test-components:
 backend-check-version-soft:
 	docker-compose run --rm backend-php-cli bash -c 'php --version && composer --version'
 	docker exec -it starter_backend-nginx_1 nginx -v
-	#docker exec -it starter_backend-mysql_1 mysql -V
-	docker exec -it starter_backend-postgres_1 postgres -V
+	docker exec -it starter_backend-mysql_1 mysql -V
+	#docker exec -it starter_backend-postgres_1 postgres -V
 
 # Фронтенд
 # инициалиазация фронтенда, нужно только в dev окружении
@@ -83,4 +83,4 @@ ansible-ping:
 	ansible all -i infrastructure/backend/development/ansible/inventory/inventory.ini -u root -m ping
 ansible-deploy:
 	#ansible-playbook -i infrastructure/backend/development/ansible/inventory/inventory.ini infrastructure/backend/development/ansible/all.yml -u root -t preconfig -t soft
-	ansible-playbook -i infrastructure/backend/development/ansible/inventory/inventory.ini infrastructure/backend/development/ansible/all.yml -u root -t mysql
+	ansible-playbook -i infrastructure/backend/development/ansible/inventory/inventory.ini infrastructure/backend/development/ansible/all.yml -u root -t deploy
