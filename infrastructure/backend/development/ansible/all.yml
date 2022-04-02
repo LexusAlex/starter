@@ -1,8 +1,15 @@
 ---
-- name: deploy / build
-  hosts: deploy
+- name: debian-deploy / build
+  hosts: Ddev
   roles:
-      - role: preconfig
-        tags: preconfig
-      - role: soft
-        tags: soft
+      - role: debian-preconfig
+        tags: debian-preconfig
+      - role: debian-soft
+        tags: debian-soft
+- name: debian-prod / build
+  hosts: Dprod
+  roles:
+      - role: debian-preconfig
+        tags: debian-preconfig
+      - role: debian-soft
+        tags: debian-soft

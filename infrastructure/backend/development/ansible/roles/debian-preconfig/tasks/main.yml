@@ -28,5 +28,6 @@
           - gnupg2
           - curl
           - git
+          - sudo
   tags:
       install-preconfig-soft

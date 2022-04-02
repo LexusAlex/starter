@@ -80,8 +80,10 @@ frontend-build:
 
 # Ansible
 ansible-ping:
-	ansible all -i infrastructure/backend/development/ansible/inventory/inventory.ini -u root -m ping
+	ansible all -i infrastructure/backend/development/ansible/inventory/inventory.ini -l Dprod -u root -m ping
 ansible-deploy:
 	#ansible-playbook -i infrastructure/backend/development/ansible/inventory/inventory.ini infrastructure/backend/development/ansible/all.yml -u root -t preconfig -t soft
 	#ansible-playbook -i infrastructure/backend/development/ansible/inventory/inventory.ini infrastructure/backend/development/ansible/all.yml -u root -t php
-	ansible-playbook -i infrastructure/backend/development/ansible/inventory/inventory.ini infrastructure/backend/development/ansible/all.yml -u root
+	ansible-playbook -i infrastructure/backend/development/ansible/inventory/inventory.ini infrastructure/backend/development/ansible/all.yml -l Ddev -u root
+ansible-deploy-prod:
+	ansible-playbook -i infrastructure/backend/development/ansible/inventory/inventory.ini infrastructure/backend/development/ansible/all.yml -l Dprod -u root -t deploy
