@@ -83,4 +83,5 @@ ansible-ping:
 	ansible all -i infrastructure/backend/development/ansible/inventory/inventory.ini -u root -m ping
 ansible-deploy:
 	#ansible-playbook -i infrastructure/backend/development/ansible/inventory/inventory.ini infrastructure/backend/development/ansible/all.yml -u root -t preconfig -t soft
-	ansible-playbook -i infrastructure/backend/development/ansible/inventory/inventory.ini infrastructure/backend/development/ansible/all.yml -u root -t deploy
+	#ansible-playbook -i infrastructure/backend/development/ansible/inventory/inventory.ini infrastructure/backend/development/ansible/all.yml -u root -t php
+	ansible-playbook -i infrastructure/backend/development/ansible/inventory/inventory.ini infrastructure/backend/development/ansible/all.yml -u root
