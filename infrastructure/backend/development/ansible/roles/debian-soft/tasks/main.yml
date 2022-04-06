@@ -180,3 +180,13 @@
       #      var: out
   debugger: on_failed
   tags: deploy
+
+- name: set enviroment
+  become: true
+  become_user: www-data
+  apt:
+      name: sudo
+  environment:
+      MY_VAR: "text"
+  tags: env
+
