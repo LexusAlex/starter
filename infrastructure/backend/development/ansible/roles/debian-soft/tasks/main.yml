@@ -63,7 +63,7 @@
             repo: https://github.com/LexusAlex/starter.git
             dest: /var/www/starter
             update: no
-        become: yes
+        become: true
         become_user: starter
         tags: git-clone
   debugger: on_failed
@@ -163,13 +163,13 @@
 - name: deploy
   block:
       - name: git pull latest changes
-        become: yes
+        become: true
         become_user: starter
         shell: git pull origin main
         args:
             chdir: "/var/www/starter/"
       - name: composer install
-        become: yes
+        become: true
         become_user: starter
         shell: composer install --no-dev --optimize-autoloader
         args:
