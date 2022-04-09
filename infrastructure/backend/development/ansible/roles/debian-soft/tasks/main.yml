@@ -24,6 +24,7 @@
                 - php8.1-zip
         tags: php-install
         debugger: on_failed
+        notify: restart phpfpm
   tags: php
 
 - name: composer
@@ -160,6 +161,38 @@
   debugger: on_failed
   tags: mysql
 
+- name: env
+  block:
+      - name: add path is php fpm
+        blockinfile:
+          path: /etc/php/8.1/fpm/pool.d/www.conf
+          backup: yes
+          marker: ;{mark}
+          block: |
+            include=/usr/local/etc/php-fpm.d/*.conf
+        tags: env_include_path
+      - name: add directory
+        file:
+          path: /usr/local/etc/php-fpm.d
+          state: directory
+          recurse: yes
+        tags: env_directory
+      - name: add empty file to env
+        file:
+            path: /usr/local/etc/php-fpm.d/{{ vars_file }}.conf
+            state: touch
+        tags: env_file
+      - name: copy content
+        copy:
+            dest: /usr/local/etc/php-fpm.d/{{ vars_file }}.conf
+            content: |
+                env[MYSQL_USER] = {{ mysql_application_user }}
+                env[MYSQL_PASSWORD] = {{ mysql_application_password }}
+                env[MYSQL_DB] = {{ mysql_application_db }}
+        tags: env_file
+  notify: restart phpfpm
+  tags: env
+
 - name: deploy
   block:
       - name: git pull latest changes
@@ -180,13 +213,4 @@
       #      var: out
   debugger: on_failed
   tags: deploy
-
-- name: set enviroment
-  become: true
-  become_user: www-data
-  apt:
-      name: sudo
-  environment:
-      MY_VAR: "text"
-  tags: env
 
