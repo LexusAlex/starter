@@ -20,7 +20,7 @@
 ### production
 
 - php 8.1.4 (15.03.2022) [https://github.com/php/php-src/tags](https://github.com/php/php-src/tags)
-- composer 2.3.3 (01.04.2022) [https://github.com/composer/composer/tags](https://github.com/composer/composer/tags)
+- composer 2.3.4 (07.04.2022) [https://github.com/composer/composer/tags](https://github.com/composer/composer/tags)
 - nginx 1.21.6 (25.01.2022) [https://github.com/nginx/nginx/tags](https://github.com/nginx/nginx/tags)
 - mysql 8.0.28 (17.12.2021) [https://github.com/mysql/mysql-server/tags](https://github.com/mysql/mysql-server/tags)
 

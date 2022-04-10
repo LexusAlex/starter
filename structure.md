@@ -1,4 +1,4 @@
-## Структура 
+q## Структура 
 
 Структура проекта по фичам, абсолютно любая иерархия зависит от задач
 Идеальная программная модель приложения должна максимально повторять устройство этого бизнеса и быть удобна для всех его работников.
@@ -232,4 +232,18 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
    3. Добавлена секция проект, в которой мы создали системного пользователя, директорию, скачали проект, на этом этапе клонирование происходит один раз
    4. Установка nginx
    5. Добавлены конфиги nginx
+
+#### Контейнер внедрения зависимостей
+
+Варианты контейнеров
+
+https://github.com/silexphp/Pimple
+https://github.com/thephpleague/container
+https://github.com/PHP-DI/PHP-DI
+https://packagist.org/packages/psr/container
+
+docker-compose run --rm backend-php-cli composer require league/container
+
+Следующий этап
+https://github.com/deworkerpro/demo-auction/blob/master/api/config/dependencies.php
 

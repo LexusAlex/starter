@@ -26,6 +26,7 @@
         "php": ">= 8.1.0",
         "ext-pdo": "*",
         "doctrine/orm": "^2.11",
+        "league/container": "^4.2",
         "symfony/cache": "^6.0",
         "symfony/mailer": "^6.0"
     },
