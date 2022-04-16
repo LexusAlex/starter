@@ -1,4 +1,4 @@
-q## Структура 
+## Структура 
 
 Структура проекта по фичам, абсолютно любая иерархия зависит от задач
 Идеальная программная модель приложения должна максимально повторять устройство этого бизнеса и быть удобна для всех его работников.
@@ -243,6 +243,8 @@ https://github.com/PHP-DI/PHP-DI
 https://packagist.org/packages/psr/container
 
 docker-compose run --rm backend-php-cli composer require league/container
+docker-compose run --rm backend-php-cli composer require php-di/php-di --with-all-dependencies
+docker-compose run --rm backend-php-cli composer require php-di/php-di:v7.x-dev
 
 Следующий этап
 https://github.com/deworkerpro/demo-auction/blob/master/api/config/dependencies.php
