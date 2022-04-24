@@ -245,6 +245,7 @@ https://packagist.org/packages/psr/container
 docker-compose run --rm backend-php-cli composer require league/container
 docker-compose run --rm backend-php-cli composer require php-di/php-di --with-all-dependencies
 docker-compose run --rm backend-php-cli composer require php-di/php-di:v7.x-dev
+docker-compose run --rm backend-php-cli composer require yiisoft/di --prefer-dist
 
 Следующий этап
 https://github.com/deworkerpro/demo-auction/blob/master/api/config/dependencies.php
