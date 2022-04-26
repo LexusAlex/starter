@@ -75,6 +75,9 @@ src/
         /Twig
             /Configuration
                 twig.php
+        /MegaReportXls
+          /Query
+          /Index
 test/
     Functional/
 
@@ -250,3 +253,22 @@ docker-compose run --rm backend-php-cli composer require yiisoft/di --prefer-dis
 Следующий этап
 https://github.com/deworkerpro/demo-auction/blob/master/api/config/dependencies.php
 
+#### Агрегатор
+
+docker-compose run --rm backend-php-cli composer require laminas/laminas-config-aggregator
+
+#### Выборки
+
+Для каждой фичи делаем отдельный модуль
+
+#### Конфигурации
+
+/config
+  doctrine
+  logger
+/blog
+  doctrine
+  logger
+/shop
+  doctrine
+  logger

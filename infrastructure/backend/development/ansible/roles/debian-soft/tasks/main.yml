@@ -190,6 +190,7 @@
                 env[MYSQL_PASSWORD] = {{ mysql_application_password }}
                 env[MYSQL_DATABASE] = {{ mysql_application_db }}
                 env[MYSQL_CHARSET] = utf8
+                env[APPLICATION_ENV] = {{ application_env }}
         tags: env_file
   notify: restart phpfpm
   tags: env

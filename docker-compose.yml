@@ -32,6 +32,7 @@ services:
             POSTGRES_PASSWORD: starter
             POSTGRES_DB: starter
             POSTGRES_CHARSET: utf-8
+            APPLICATION_ENV: dev
         volumes:
             - ./:/starter
 
@@ -57,6 +58,7 @@ services:
             POSTGRES_PASSWORD: starter
             POSTGRES_DB: starter
             POSTGRES_CHARSET: utf-8
+            APPLICATION_ENV: dev
         volumes:
             - ./:/starter
 
