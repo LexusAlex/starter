@@ -62,6 +62,6 @@ class DoctrineTest extends TestCase
             ->executeQuery()
             ->fetchAssociative();
 
-        self::assertEquals('8.0.28', $result["VERSION()"]);
+        self::assertEquals('8.0.29', $result["VERSION()"]);
     }
 }
