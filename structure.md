@@ -245,6 +245,7 @@ https://github.com/thephpleague/container
 https://github.com/PHP-DI/PHP-DI
 https://packagist.org/packages/psr/container
 
+docker-compose run --rm backend-php-cli composer require pimple/pimple
 docker-compose run --rm backend-php-cli composer require league/container
 docker-compose run --rm backend-php-cli composer require php-di/php-di --with-all-dependencies
 docker-compose run --rm backend-php-cli composer require php-di/php-di:v7.x-dev
@@ -252,6 +253,12 @@ docker-compose run --rm backend-php-cli composer require yiisoft/di --prefer-dis
 
 Следующий этап
 https://github.com/deworkerpro/demo-auction/blob/master/api/config/dependencies.php
+
+Откатили на старую версию symfony/service-contracts для установки di container 1.0
+В будущем пофиксить
+
+Обновить когда выйдет di container новая версия
+symfony/service-contracts v2.5.1 v3.0.1
 
 #### Агрегатор
 
@@ -272,3 +279,5 @@ docker-compose run --rm backend-php-cli composer require laminas/laminas-config-
 /shop
   doctrine
   logger
+
+#### Окружения
