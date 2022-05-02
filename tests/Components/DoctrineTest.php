@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Test\Components;
 
 use Doctrine\Common\Cache\Psr6\DoctrineProvider;
@@ -13,9 +15,12 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Component\Cache\Adapter\ArrayAdapter;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 
-class DoctrineTest extends TestCase
+/**
+ * @internal
+ */
+final class DoctrineTest extends TestCase
 {
-    public function testDoctrineConnection()
+    public function testDoctrineConnection(): void
     {
         $configurations = Setup::createConfiguration(true, null, (null) ? DoctrineProvider::wrap(new FilesystemAdapter('', 0, __DIR__ . '/../../var/cache/doctrine/cache')) : DoctrineProvider::wrap(new ArrayAdapter()));
         $configurations->setMetadataDriverImpl(new AttributeDriver([]));
@@ -44,7 +49,7 @@ class DoctrineTest extends TestCase
                 'user' => getenv('MYSQL_USER'),
                 'password' => getenv('MYSQL_PASSWORD'),
                 'dbname' => getenv('MYSQL_DATABASE'),
-                'charset' => getenv('MYSQL_CHARSET')
+                'charset' => getenv('MYSQL_CHARSET'),
             ], $configurations, $eventManager);
         } elseif (getenv('DB') === 'postgres') {
             $entityManager = EntityManager::create([
@@ -53,7 +58,7 @@ class DoctrineTest extends TestCase
                 'user' => getenv('POSTGRES_USER'),
                 'password' => getenv('POSTGRES_PASSWORD'),
                 'dbname' => getenv('POSTGRES_DB'),
-                'charset' => getenv('POSTGRES_CHARSET')
+                'charset' => getenv('POSTGRES_CHARSET'),
             ], $configurations, $eventManager);
         }
 
@@ -62,6 +67,6 @@ class DoctrineTest extends TestCase
             ->executeQuery()
             ->fetchAssociative();
 
-        self::assertEquals('8.0.29', $result["VERSION()"]);
+        self::assertEquals('8.0.29', $result['VERSION()']);
     }
 }

@@ -268,6 +268,11 @@ docker-compose run --rm backend-php-cli composer require laminas/laminas-config-
 
 Для каждой фичи делаем отдельный модуль
 
+#### Линтеры и тесты
+docker-compose run --rm backend-php-cli composer require --dev friendsofphp/php-cs-fixer
+docker-compose run --rm backend-php-cli composer require --dev vimeo/psalm
+docker-compose run --rm backend-php-cli composer require --dev roave/security-advisories
+
 #### Конфигурации
 
 /config

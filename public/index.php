@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 use DI\ContainerBuilder;
@@ -11,7 +12,7 @@ $builder = new ContainerBuilder();
 
 $aggregator = new ConfigAggregator([
     new PhpFileProvider(__DIR__ . '/../src/Configuration/common/*.php'),
-    //new PhpFileProvider(__DIR__ . '/' . env('APP_ENV', 'prod') . '/*.php'),
+    // new PhpFileProvider(__DIR__ . '/' . env('APP_ENV', 'prod') . '/*.php'),
 ]);
 
 $builder->addDefinitions($aggregator->getMergedConfig());

@@ -59,7 +59,18 @@ backend-check-version-soft:
 	docker exec -it starter_backend-nginx_1 nginx -v
 	docker exec -it starter_backend-mysql_1 mysql -V
 	#docker exec -it starter_backend-postgres_1 postgres -V
+# исправление линтером
+backend-php-cs-fixer:
+	docker-compose run --rm backend-php-cli composer php-cs-fixer
+# проверка линтером
+backend-php-cs-fixer-dry-run:
+	docker-compose run --rm backend-php-cli composer php-cs-fixer-dry-run
 
+backend-psalm:
+	docker-compose run --rm backend-php-cli composer psalm
+
+backend-psalm-dry-run:
+	docker-compose run --rm backend-php-cli composer psalm-dry-run
 # Фронтенд
 # инициалиазация фронтенда, нужно только в dev окружении
 frontend-init: npm-install

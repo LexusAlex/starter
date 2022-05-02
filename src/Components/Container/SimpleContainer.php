@@ -8,8 +8,6 @@ use Closure;
 use Psr\Container\ContainerInterface;
 use Starter\Components\Container\Exception\NotFoundException;
 
-use function array_key_exists;
-
 final class SimpleContainer implements ContainerInterface
 {
     private array $definitions;
@@ -25,7 +23,6 @@ final class SimpleContainer implements ContainerInterface
     private Closure $hasCallback;
 
     /**
-     * @param array $definitions
      * @param Closure|null $factory Should be closure that works like ContainerInterface::get(string $id): mixed
      * @param Closure|null $hasCallback Should be closure that works like ContainerInterface::has(string $id): bool
      *
@@ -58,7 +55,7 @@ final class SimpleContainer implements ContainerInterface
 
     public function get($id)
     {
-        if (!array_key_exists($id, $this->definitions)) {
+        if (!\array_key_exists($id, $this->definitions)) {
             $this->definitions[$id] = ($this->factory)($id);
         }
         return $this->definitions[$id];
@@ -66,7 +63,7 @@ final class SimpleContainer implements ContainerInterface
 
     public function has($id): bool
     {
-        if (array_key_exists($id, $this->definitions)) {
+        if (\array_key_exists($id, $this->definitions)) {
             return true;
         }
         return ($this->hasCallback)($id);
