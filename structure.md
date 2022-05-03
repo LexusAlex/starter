@@ -273,6 +273,10 @@ docker-compose run --rm backend-php-cli composer require --dev friendsofphp/php-
 docker-compose run --rm backend-php-cli composer require --dev vimeo/psalm
 docker-compose run --rm backend-php-cli composer require --dev roave/security-advisories
 
+#### Слим фреймворк
+docker-compose run --rm backend-php-cli composer require slim/slim
+docker-compose run --rm backend-php-cli composer require slim/psr7
+
 #### Конфигурации
 
 /config

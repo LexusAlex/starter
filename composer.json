@@ -31,6 +31,8 @@
         "doctrine/orm": "^2.11",
         "laminas/laminas-config-aggregator": "^1.7",
         "php-di/php-di": "^6.4",
+        "slim/psr7": "^1.5",
+        "slim/slim": "^4.10",
         "symfony/cache": "^6.0",
         "symfony/mailer": "^6.0",
         "symfony/service-contracts": "2.5.1"
