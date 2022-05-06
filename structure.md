@@ -278,6 +278,8 @@ docker-compose run --rm backend-php-cli composer require slim/slim
 docker-compose run --rm backend-php-cli composer require slim/psr7
 docker-compose run --rm backend-php-cli composer require monolog/monolog
 
+https://github.com/bryanjhv/slim-session
+
 
 #### Конфигурации
 

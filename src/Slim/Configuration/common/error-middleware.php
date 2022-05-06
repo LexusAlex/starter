@@ -3,8 +3,10 @@
 declare(strict_types=1);
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
+use Psr\Log\LoggerInterface;
 use Slim\Interfaces\CallableResolverInterface;
 use Slim\Middleware\ErrorMiddleware;
+use Starter\Slim\ErrorHandler\LogErrorHandler;
 use function Starter\Main\Configuration\env;
 
 return [
@@ -25,11 +27,11 @@ return [
             true
         );
 
-        //$logger = $container->get(LoggerInterface::class);
+        $logger = $container->get(LoggerInterface::class);
 
-        //$middleware->setDefaultErrorHandler(
-            //new LogErrorHandler($callableResolver, $responseFactory, $logger)
-        //);
+        $middleware->setDefaultErrorHandler(
+            new LogErrorHandler($callableResolver, $responseFactory, $logger)
+        );
 
         return $middleware;
     },

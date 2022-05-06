@@ -8,6 +8,7 @@ use Laminas\ConfigAggregator\PhpFileProvider;
 use Slim\Factory\AppFactory;
 use Slim\Middleware\ErrorMiddleware;
 use Starter\Http\Action\HomeAction;
+use function Starter\Main\Configuration\env;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -18,6 +19,7 @@ $aggregator = new ConfigAggregator([
     new PhpFileProvider(__DIR__ . '/../src/Main/Configuration/common/*.php'),
     new PhpFileProvider(__DIR__ . '/../src/Slim/Configuration/common/*.php'),
     new PhpFileProvider(__DIR__ . '/../src/Monolog/Configuration/common/*.php'),
+    new PhpFileProvider(__DIR__ . '/../src/Monolog/Configuration/'. env('APPLICATION_ENV', 'prod') .'/*.php'),
     // new PhpFileProvider(__DIR__ . '/' . env('APP_ENV', 'prod') . '/*.php'),
 ]);
 
