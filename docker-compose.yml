@@ -33,6 +33,7 @@ services:
             POSTGRES_DB: starter
             POSTGRES_CHARSET: utf-8
             APPLICATION_ENV: dev
+            APPLICATION_DEBUG: 1
         volumes:
             - ./:/starter
 
@@ -59,6 +60,7 @@ services:
             POSTGRES_DB: starter
             POSTGRES_CHARSET: utf-8
             APPLICATION_ENV: dev
+            APPLICATION_DEBUG: 1
         volumes:
             - ./:/starter
 

@@ -276,8 +276,14 @@ docker-compose run --rm backend-php-cli composer require --dev roave/security-ad
 #### Слим фреймворк
 docker-compose run --rm backend-php-cli composer require slim/slim
 docker-compose run --rm backend-php-cli composer require slim/psr7
+docker-compose run --rm backend-php-cli composer require monolog/monolog
+
 
 #### Конфигурации
+
+Продумать механизм сбора конфигов
+
+Для каждой функциональности свои конфиги
 
 /config
   doctrine

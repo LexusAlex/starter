@@ -8,7 +8,7 @@
     },
     "autoload": {
         "files": [
-            "src/Configuration/env.php"
+            "src/Main/Configuration/env.php"
         ],
         "psr-4": {
             "Starter\\": "src/"
@@ -30,6 +30,7 @@
         "ext-pdo": "*",
         "doctrine/orm": "^2.11",
         "laminas/laminas-config-aggregator": "^1.7",
+        "monolog/monolog": "^2.5",
         "php-di/php-di": "^6.4",
         "slim/psr7": "^1.5",
         "slim/slim": "^4.10",

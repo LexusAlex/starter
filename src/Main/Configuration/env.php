@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Starter\Configuration;
+namespace Starter\Main\Configuration;
 
 use RuntimeException;
 
