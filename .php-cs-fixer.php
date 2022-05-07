@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return
     (new PhpCsFixer\Config())
-        ->setCacheFile(__DIR__ . '/var/phpcs.cache/.php_cs')
+        ->setCacheFile(__DIR__ . '/var/cache/.php_cs')
         ->setFinder(
             PhpCsFixer\Finder::create()
                 ->exclude([
