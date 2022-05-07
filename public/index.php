@@ -12,19 +12,21 @@ use function Starter\Main\Configuration\env;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-// Контейнер
+// Сборка конфигурации
+$components = ['Main', 'Slim', 'Monolog'];
+$files = [];
+
+foreach ($components as $component) {
+    $files[] = new PhpFileProvider(__DIR__ . "/../src/{$component}/Configuration/common/*.php");
+    $files[] = new PhpFileProvider(__DIR__ . "/../src/{$component}/Configuration/" . env('APPLICATION_ENV', 'prod') . '/*.php');
+}
+
+$aggregator = new ConfigAggregator($files);
+$config = $aggregator->getMergedConfig();
+
+// Контейнер внедрения зависимостей
 $builder = new ContainerBuilder();
-
-$aggregator = new ConfigAggregator([
-    new PhpFileProvider(__DIR__ . '/../src/Main/Configuration/common/*.php'),
-    new PhpFileProvider(__DIR__ . '/../src/Slim/Configuration/common/*.php'),
-    new PhpFileProvider(__DIR__ . '/../src/Monolog/Configuration/common/*.php'),
-    new PhpFileProvider(__DIR__ . '/../src/Monolog/Configuration/' . env('APPLICATION_ENV', 'prod') . '/*.php'),
-    // new PhpFileProvider(__DIR__ . '/' . env('APP_ENV', 'prod') . '/*.php'),
-]);
-
-$builder->addDefinitions($aggregator->getMergedConfig());
-
+$builder->addDefinitions($config);
 $container = $builder->build();
 
 // Приложение
