@@ -18,6 +18,7 @@ const paths = {
   scss: {
     src: "./frontend/scss/main.{scss,sass}",
     dist: "./frontend/dist/css/",
+    dist2: "./public/assets/css/",
     watch: [
       "./frontend/blocks/**/*.{scss,sass}",
       "./frontend/scss/**/*.{scss,sass}"
@@ -26,6 +27,7 @@ const paths = {
   js: {
     src: "./frontend/js/index.js",
     dist: "./frontend/dist/js/",
+    dist2: "./public/assets/js/",
     watch: [
       "./frontend/blocks/**/*.js",
       "./frontend/js/**/*.js"
@@ -37,6 +39,7 @@ const paths = {
       "!./frontend/images/favicon/*.{jpg,jpeg,png,gif,tiff,webp}"
     ],
     dist: "./frontend/dist/images/",
+    dist2: "./public/assets/images/",
     watch: "./frontend/images/**/*.{jpg,jpeg,png,gif,svg,tiff,webp}"
   },
   fonts: {

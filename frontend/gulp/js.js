@@ -26,6 +26,7 @@ gulp.task("js", () => {
             suffix: ".min"
         })))
         .pipe(gulp.dest(paths.js.dist))
+        .pipe(gulp.dest(paths.js.dist2))
         .pipe(debug({
             "title": "JS files"
         }))

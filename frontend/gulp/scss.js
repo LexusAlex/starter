@@ -51,6 +51,7 @@ gulp.task("scss", () => {
         .pipe(plumber.stop())
         .pipe(gulpif(!production, sourcemaps.write("./maps/")))
         .pipe(gulp.dest(paths.scss.dist))
+        .pipe(gulp.dest(paths.scss.dist2))
         .pipe(debug({
             "title": "CSS files"
         }))
