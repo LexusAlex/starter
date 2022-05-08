@@ -1,31 +1,26 @@
 <!doctype html>
 <html lang="ru">
-@@include("head.html", {"title": "Страницы"})
+@@include("head.html", {"title": "Starter main template"})
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Страница</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td><a href="main.html">Главная</a></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td><a href="login.html">Логин</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="bi me-2" role="img">
+                <use xlink:href="images/bootstrap-icons.svg#code-slash"/>
+                <title>Bootstrap</title>
+            <span class="fs-4">Starter</span>
+            </svg>
+        </a>
+    </header>
+    <main>
+        <h1>Main content</h1>
+    </main>
+    <footer class="pt-5 my-5 text-muted border-top">
+        Foter content
+    </footer>
+</div>
+
 @@include("foot.html")
 </body>
 </html>
