@@ -303,6 +303,26 @@ dev
 prod
 test
 
+#### TODO
+
+1. Обновить symfony/service-contracts v2.5.1 v3.0.1 когда выйдет di container версия 7
+2. Дизайн на bootstrap без лишних изначальных заморочек
+
+#### Дизайн
+
+На основе шаблона
+https://getbootstrap.com/docs/5.1/examples/starter-template/
+
+Иконки
+https://icons.getbootstrap.com/#styling
+
+Компоненты
+https://getbootstrap.com/docs/5.0/components/accordion/
+
+#### twig
+
+docker-compose run --rm backend-php-cli composer require twig/twig
+
 #### Функциональные возможности
 
 !Нужно разделить на отдельные файлы в будущем для удобного использования

@@ -13,7 +13,7 @@ use function Starter\Main\Configuration\env;
 require __DIR__ . '/../vendor/autoload.php';
 
 // Сборка конфигурации
-$components = ['Main', 'Slim', 'Monolog'];
+$components = ['Main', 'Slim', 'Monolog', 'Twig'];
 $files = [];
 
 foreach ($components as $component) {
