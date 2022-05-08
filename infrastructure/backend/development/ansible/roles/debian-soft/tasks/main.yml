@@ -195,6 +195,18 @@
   notify: restart phpfpm
   tags: env
 
+- name: change mode
+  block:
+      - name: change mode for var
+        become: true
+        become_user: root
+        file:
+            path: "/var/www/starter/var"
+            recurse: true
+            mode: "777"
+  debugger: on_failed
+  tags: change-mode
+
 - name: deploy
   block:
       - name: git pull latest changes
