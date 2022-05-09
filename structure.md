@@ -307,6 +307,7 @@ test
 
 1. Обновить symfony/service-contracts v2.5.1 v3.0.1 когда выйдет di container версия 7
 2. Дизайн на bootstrap без лишних изначальных заморочек
+3. Писать тесты ко все написанному функционалу
 
 #### Дизайн
 
@@ -323,6 +324,13 @@ https://getbootstrap.com/docs/5.0/components/accordion/
 
 docker-compose run --rm backend-php-cli composer require twig/twig
 
+Продумать структуру шаблонов, чтобы было удобно с ними работать
+
+#### url
+
+https://odan.github.io/2022/02/19/slim-basic-auth.html
+https://github.com/odan/slim4-skeleton/blob/master/config/routes.php
+
 #### Функциональные возможности
 
 !Нужно разделить на отдельные файлы в будущем для удобного использования
@@ -332,4 +340,5 @@ docker-compose run --rm backend-php-cli composer require twig/twig
 3. Создание приложения на основе контейнера
 4. Секция промежуточного ПО
 5. Задание маршрутов
+   1. Определение экшена
 6. Запуск приложения

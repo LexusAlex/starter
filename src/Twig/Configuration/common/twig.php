@@ -56,7 +56,7 @@ return [
             ],
             'cache_dir' => __DIR__ . '/../../../../var/cache/twig',
             'extensions' => [
-                //FrontendUrlTwigExtension::class,
+                // FrontendUrlTwigExtension::class,
             ],
         ],
     ],

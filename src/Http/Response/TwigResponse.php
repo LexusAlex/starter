@@ -21,7 +21,7 @@ final class TwigResponse extends Response
      * @throws RuntimeError
      * @throws LoaderError
      */
-    public function __construct(string $template, Environment $environment, $vars = [])
+    public function __construct(string $template, Environment $environment, array $vars = [])
     {
         $this->environment = $environment;
         parent::__construct(

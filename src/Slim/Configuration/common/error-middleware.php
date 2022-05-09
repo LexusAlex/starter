@@ -7,6 +7,7 @@ use Psr\Log\LoggerInterface;
 use Slim\Interfaces\CallableResolverInterface;
 use Slim\Middleware\ErrorMiddleware;
 use Starter\Slim\ErrorHandler\LogErrorHandler;
+use Starter\Slim\ErrorHandler\TwigErrorRenderer;
 use function Starter\Main\Configuration\env;
 
 return [
@@ -32,6 +33,10 @@ return [
         $middleware->setDefaultErrorHandler(
             new LogErrorHandler($callableResolver, $responseFactory, $logger)
         );
+
+        if (!$config['display_details']) {
+            $middleware->getDefaultErrorHandler()->registerErrorRenderer('text/html', TwigErrorRenderer::class);
+        }
 
         return $middleware;
     },

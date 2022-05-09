@@ -10,6 +10,8 @@ use Slim\Middleware\ErrorMiddleware;
 use Starter\Http\Action\HomeAction;
 use function Starter\Main\Configuration\env;
 
+http_response_code(500);
+
 require __DIR__ . '/../vendor/autoload.php';
 
 // Сборка конфигурации
