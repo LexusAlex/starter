@@ -19,14 +19,14 @@
 
 ### production
 
-- php 8.1.5 (12.04.2022) [https://github.com/php/php-src/tags](https://github.com/php/php-src/tags)
+- php 8.1.6 (11.05.2022) [https://github.com/php/php-src/tags](https://github.com/php/php-src/tags)
 - composer 2.3.5 (13.04.2022) [https://github.com/composer/composer/tags](https://github.com/composer/composer/tags)
 - nginx 1.21.6 (25.01.2022) [https://github.com/nginx/nginx/tags](https://github.com/nginx/nginx/tags)
 - mysql 8.0.29 (08.04.2022) [https://github.com/mysql/mysql-server/tags](https://github.com/mysql/mysql-server/tags)
 
 ### development
 
-- postgresql 14.2 (08.02.2022) [https://github.com/postgres/postgres/tags](https://github.com/postgres/postgres/tags)
+- postgresql 14.3 (10.05.2022) [https://github.com/postgres/postgres/tags](https://github.com/postgres/postgres/tags)
 
 ## Initialization| commands
 
