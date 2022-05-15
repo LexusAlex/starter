@@ -17,9 +17,9 @@ final class TwigResponse extends Response
     private Environment $environment;
 
     /**
-     * @throws SyntaxError
-     * @throws RuntimeError
      * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
      */
     public function __construct(string $template, Environment $environment, array $vars = [])
     {

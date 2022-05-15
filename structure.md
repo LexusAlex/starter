@@ -326,6 +326,10 @@ docker-compose run --rm backend-php-cli composer require twig/twig
 
 Продумать структуру шаблонов, чтобы было удобно с ними работать
 
+Весь перечень структур
+
+https://twig.symfony.com/doc/3.x/
+
 #### url
 
 https://odan.github.io/2022/02/19/slim-basic-auth.html

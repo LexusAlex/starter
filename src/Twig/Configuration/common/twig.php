@@ -7,7 +7,7 @@ use Twig\Environment;
 use Twig\Extension\DebugExtension;
 use Twig\Extension\ExtensionInterface;
 use Twig\Loader\FilesystemLoader;
-use function Starter\Main\Configuration\env;
+use function Starter\Configuration\env;
 
 return [
     Environment::class => static function (ContainerInterface $container): Environment {

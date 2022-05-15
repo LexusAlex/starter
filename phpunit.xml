@@ -12,10 +12,33 @@
          verbose="true">
     <testsuites>
         <testsuite name="default">
+            <directory>src/Configuration/Test</directory>
+            <directory>src/Twig/Test</directory>
+            <directory>src/Monolog/Test</directory>
+            <directory>src/Slim/Test</directory>
+            <directory>src/Http/Test</directory>
+            <directory>tests</directory>
+        </testsuite>
+        <testsuite name="functional">
             <directory>tests</directory>
         </testsuite>
         <testsuite name="components">
             <directory>tests/Components</directory>
+        </testsuite>
+        <testsuite name="configuration">
+            <directory>src/Configuration/Test</directory>
+        </testsuite>
+        <testsuite name="twig">
+            <directory>src/Twig/Test</directory>
+        </testsuite>
+        <testsuite name="monolog">
+            <directory>src/Monolog/Test</directory>
+        </testsuite>
+        <testsuite name="slim">
+            <directory>src/Slim/Test</directory>
+        </testsuite>
+        <testsuite name="http">
+            <directory>src/Http/Test</directory>
         </testsuite>
     </testsuites>
 </phpunit>

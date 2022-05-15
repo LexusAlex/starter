@@ -7,7 +7,7 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
-use function Starter\Main\Configuration\env;
+use function Starter\Configuration\env;
 
 return [
     LoggerInterface::class => static function (ContainerInterface $container) {

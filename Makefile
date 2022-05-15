@@ -53,6 +53,18 @@ backend-test:
 	docker-compose run --rm backend-php-cli composer test
 backend-test-components:
 	docker-compose run --rm backend-php-cli composer test-components
+backend-test-functional:
+	docker-compose run --rm backend-php-cli composer test-functional
+backend-test-configuration:
+	docker-compose run --rm backend-php-cli composer test-configuration
+backend-test-twig:
+	docker-compose run --rm backend-php-cli composer test-twig
+backend-test-monolog:
+	docker-compose run --rm backend-php-cli composer test-monolog
+backend-test-slim:
+	docker-compose run --rm backend-php-cli composer test-slim
+backend-test-http:
+	docker-compose run --rm backend-php-cli composer test-http
 # проверка версий ПО docker
 backend-check-version-soft:
 	docker-compose run --rm backend-php-cli bash -c 'php --version && composer --version'

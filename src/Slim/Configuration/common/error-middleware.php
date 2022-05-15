@@ -4,11 +4,12 @@ declare(strict_types=1);
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Log\LoggerInterface;
+use Slim\Handlers\ErrorHandler;
 use Slim\Interfaces\CallableResolverInterface;
 use Slim\Middleware\ErrorMiddleware;
 use Starter\Slim\ErrorHandler\LogErrorHandler;
 use Starter\Slim\ErrorHandler\TwigErrorRenderer;
-use function Starter\Main\Configuration\env;
+use function Starter\Configuration\env;
 
 return [
     ErrorMiddleware::class => static function (ContainerInterface $container): ErrorMiddleware {
@@ -35,7 +36,9 @@ return [
         );
 
         if (!$config['display_details']) {
-            $middleware->getDefaultErrorHandler()->registerErrorRenderer('text/html', TwigErrorRenderer::class);
+            /** @var ErrorHandler $defaultHandler */
+            $defaultHandler = $middleware->getDefaultErrorHandler();
+            $defaultHandler->registerErrorRenderer('text/html', TwigErrorRenderer::class);
         }
 
         return $middleware;
