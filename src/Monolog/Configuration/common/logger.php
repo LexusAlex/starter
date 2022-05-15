@@ -45,7 +45,7 @@ return [
     'configuration' => [
         'logger' => [
             'debug' => (bool)env('APPLICATION_DEBUG', '0'),
-            'file' => null,
+            'file' => __DIR__ . '/../../../../var/log/' . PHP_SAPI . '/app.log',
             'stderr' => true,
             'processors' => [
                 // FeaturesMonologProcessor::class,
