@@ -278,6 +278,7 @@ docker-compose run --rm backend-php-cli composer require slim/slim
 docker-compose run --rm backend-php-cli composer require slim/psr7
 docker-compose run --rm backend-php-cli composer require monolog/monolog
 
+Сессии, научится ими пользоваться
 https://github.com/bryanjhv/slim-session
 
 
@@ -308,6 +309,7 @@ test
 1. Обновить symfony/service-contracts v2.5.1 v3.0.1 когда выйдет di container версия 7
 2. Дизайн на bootstrap без лишних изначальных заморочек
 3. Писать тесты ко все написанному функционалу
+4. Написать обработку ошибок для всех основных кодов в errorHandler
 
 #### Дизайн
 
