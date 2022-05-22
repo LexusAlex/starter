@@ -272,6 +272,7 @@ docker-compose run --rm backend-php-cli composer require laminas/laminas-config-
 docker-compose run --rm backend-php-cli composer require --dev friendsofphp/php-cs-fixer
 docker-compose run --rm backend-php-cli composer require --dev vimeo/psalm
 docker-compose run --rm backend-php-cli composer require --dev roave/security-advisories
+docker-compose run --rm backend-php-cli composer require --dev overtrue/phplint
 
 #### Слим фреймворк
 docker-compose run --rm backend-php-cli composer require slim/slim
