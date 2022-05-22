@@ -352,3 +352,7 @@ https://github.com/odan/slim4-skeleton/blob/master/config/routes.php
 5. Задание маршрутов
    1. Определение экшена
 6. Запуск приложения
+
+#### Console
+
+docker-compose run --rm backend-php-cli composer require symfony/console
