@@ -281,6 +281,10 @@ docker-compose run --rm backend-php-cli composer require monolog/monolog
 Сессии, научится ими пользоваться
 https://github.com/bryanjhv/slim-session
 
+docker-compose run --rm backend-php-cli composer require bryanjhv/slim-session
+
+
+https://github.com/yiisoft/session
 
 #### Конфигурации
 

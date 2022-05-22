@@ -28,6 +28,7 @@
     "require": {
         "php": ">= 8.1",
         "ext-pdo": "*",
+        "bryanjhv/slim-session": "^4.1",
         "doctrine/orm": "^2.11",
         "laminas/laminas-config-aggregator": "^1.7",
         "monolog/monolog": "^2.5",

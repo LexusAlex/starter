@@ -6,6 +6,7 @@ use Psr\Container\ContainerInterface;
 use Slim\App;
 use Slim\Factory\AppFactory;
 use Slim\Middleware\ErrorMiddleware;
+use Slim\Middleware\Session;
 use Starter\Http\Action\HomeAction;
 
 return static function (ContainerInterface $container): App {
@@ -14,6 +15,7 @@ return static function (ContainerInterface $container): App {
 
     // Промежуточное ПО
     $application->addBodyParsingMiddleware();
+    $application->add(Session::class);
     $application->add(ErrorMiddleware::class);
 
     // Маршруты

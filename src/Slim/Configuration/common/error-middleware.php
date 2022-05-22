@@ -38,7 +38,7 @@ return [
         if (!$config['display_details']) {
             /** @var ErrorHandler $defaultHandler */
             $defaultHandler = $middleware->getDefaultErrorHandler();
-            //$defaultHandler->setDefaultErrorRenderer('text/html', TwigErrorRenderer::class);
+            // $defaultHandler->setDefaultErrorRenderer('text/html', TwigErrorRenderer::class);
             $defaultHandler->registerErrorRenderer('text/html', TwigErrorRenderer::class);
         }
 
