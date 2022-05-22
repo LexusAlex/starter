@@ -1,8 +1,9 @@
-# Проект
+#####
 # полная инициализация всего проекта с нуля
 init: docker-down-clear docker-pull docker-build-pull docker-up-mysql application-init
-# остановка проекта
-# down: docker-down-clear
+# инициализация всего приложения
+application-init: backend-init
+#####
 # запуск проекта без баз данных
 docker-up:
 	docker-compose up -d
@@ -33,56 +34,54 @@ docker-build:
 # скачать образы и собрать образы
 docker-build-pull:
 	docker-compose build --pull
-# инициализация всего приложения
-application-init: backend-init
-
-# Бэкенд
+#####
 # инициализация бекенда
-backend-init: backend-composer-install
+backend-init: composer-install
 # установка зависимостей composer
-backend-composer-install:
+composer-install:
 	docker-compose run --rm backend-php-cli composer install
 # выгрузить обновления
-backend-composer-autoload:
+composer-autoload:
 	docker-compose run --rm backend-php-cli composer dump-autoload
 # проверка обновлений
-backend-composer-outdated:
+composer-outdated:
 	docker-compose run --rm backend-php-cli composer outdated --direct
 # запуск тестов
-backend-test:
+test:
 	docker-compose run --rm backend-php-cli composer test
-backend-test-components:
+test-components:
 	docker-compose run --rm backend-php-cli composer test-components
-backend-test-functional:
+test-functional:
 	docker-compose run --rm backend-php-cli composer test-functional
-backend-test-configuration:
+test-configuration:
 	docker-compose run --rm backend-php-cli composer test-configuration
-backend-test-twig:
+test-twig:
 	docker-compose run --rm backend-php-cli composer test-twig
-backend-test-monolog:
+test-monolog:
 	docker-compose run --rm backend-php-cli composer test-monolog
-backend-test-slim:
+test-slim:
 	docker-compose run --rm backend-php-cli composer test-slim
-backend-test-http:
+test-http:
 	docker-compose run --rm backend-php-cli composer test-http
 # проверка версий ПО docker
-backend-check-version-soft:
+check-version-soft:
 	docker-compose run --rm backend-php-cli bash -c 'php --version && composer --version'
 	docker exec -it starter_backend-nginx_1 nginx -v
 	docker exec -it starter_backend-mysql_1 mysql -V
 	#docker exec -it starter_backend-postgres_1 postgres -V
 # исправление линтером
-backend-php-cs-fixer:
+php-cs-fixer:
 	docker-compose run --rm backend-php-cli composer php-cs-fixer
 # проверка линтером
-backend-php-cs-fixer-dry-run:
+php-cs-fixer-dry-run:
 	docker-compose run --rm backend-php-cli composer php-cs-fixer-dry-run
-
-backend-psalm:
+psalm:
 	docker-compose run --rm backend-php-cli composer psalm
-
-backend-psalm-dry-run:
+psalm-dry-run:
 	docker-compose run --rm backend-php-cli composer psalm-dry-run
+phplint:
+	docker-compose run --rm backend-php-cli composer phplint
+#####
 # Фронтенд
 # инициалиазация фронтенда, нужно только в dev окружении
 frontend-init: npm-install
