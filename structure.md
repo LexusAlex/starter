@@ -315,6 +315,7 @@ test
 2. Дизайн на bootstrap без лишних изначальных заморочек
 3. Писать тесты ко все написанному функционалу
 4. Написать обработку ошибок для всех основных кодов в errorHandler
+5. Сделать отдельную страницу bootstap tookit
 
 #### Дизайн
 
@@ -326,6 +327,8 @@ https://icons.getbootstrap.com/#styling
 
 Компоненты
 https://getbootstrap.com/docs/5.0/components/accordion/
+
+
 
 #### twig
 
