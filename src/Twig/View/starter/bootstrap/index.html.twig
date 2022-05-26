@@ -1,0 +1,28 @@
+{% extends 'main.html.twig' %}
+{% block content %}
+
+  <h2>Точки останова</h2>
+  <ul>
+    <li>X 0-576</li>
+    <li>sm 576-768</li>
+    <li>md 768-992</li>
+    <li>lg 992-1200</li>
+    <li>xl 1200-1400</li>
+    <li>xll 1400-...</li>
+  </ul>
+
+  <h2>Контейнеры</h2>
+
+  <div class="container" style="border: 1px solid black">
+    Контейнер который меняет ширину в каждой точке останова, максимальный размер 1320
+  </div>
+
+  <div class="container-sm">В данном случае совпадает с просто контейнером Расширяемся с sm</div>
+
+  <div class="container-md bg-info">Расширяемся с md</div>
+  <div class="container-lg bg-secondary">Расширяемся с lg</div>
+  <div class="container-xl bg-warning">Расширяемся с xl</div>
+  <div class="container-xxl bg-light">Расширяемся с xll</div>
+
+  <div class="container-fluid" style="border: 1px solid black">Вся ширина области просмотра всегда</div>
+{% endblock %}

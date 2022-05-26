@@ -7,6 +7,7 @@ use Slim\App;
 use Slim\Factory\AppFactory;
 use Slim\Middleware\ErrorMiddleware;
 use Slim\Middleware\Session;
+use Starter\Http\Action\BootstrapAction;
 use Starter\Http\Action\HomeAction;
 
 return static function (ContainerInterface $container): App {
@@ -20,6 +21,7 @@ return static function (ContainerInterface $container): App {
 
     // Маршруты
     $application->get('/', HomeAction::class);
+    $application->get('/bootstrap', BootstrapAction::class);
 
     return $application;
 };
