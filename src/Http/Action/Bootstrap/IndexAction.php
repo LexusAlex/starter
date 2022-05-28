@@ -10,7 +10,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Starter\Http\Response\TwigResponse;
 use Twig\Environment;
 
-final class GridAction implements RequestHandlerInterface
+final class IndexAction implements RequestHandlerInterface
 {
     private Environment $environment;
 
@@ -21,6 +21,6 @@ final class GridAction implements RequestHandlerInterface
 
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        return new TwigResponse('bootstrap/grid.html.twig', $this->environment, []);
+        return new TwigResponse('bootstrap/index.html.twig', $this->environment, []);
     }
 }

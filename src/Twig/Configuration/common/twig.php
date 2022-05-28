@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Psr\Container\ContainerInterface;
+use Starter\Twig\Extension\TwigUrlExtension;
 use Twig\Environment;
 use Twig\Extension\DebugExtension;
 use Twig\Extension\ExtensionInterface;
@@ -56,7 +57,7 @@ return [
             ],
             'cache_dir' => __DIR__ . '/../../../../var/cache/twig',
             'extensions' => [
-                // FrontendUrlTwigExtension::class,
+                TwigUrlExtension::class,
             ],
         ],
     ],

@@ -7,7 +7,8 @@ use Slim\App;
 use Slim\Factory\AppFactory;
 use Slim\Middleware\ErrorMiddleware;
 use Slim\Middleware\Session;
-use Starter\Http\Action\BootstrapAction;
+use Starter\Http\Action\Bootstrap\GridAction;
+use Starter\Http\Action\Bootstrap\IndexAction;
 use Starter\Http\Action\HomeAction;
 
 return static function (ContainerInterface $container): App {
@@ -21,7 +22,8 @@ return static function (ContainerInterface $container): App {
 
     // Маршруты
     $application->get('/', HomeAction::class);
-    $application->get('/bootstrap', BootstrapAction::class);
+    $application->get('/bootstrap', IndexAction::class);
+    $application->get('/bootstrap/grid', GridAction::class);
 
     return $application;
 };

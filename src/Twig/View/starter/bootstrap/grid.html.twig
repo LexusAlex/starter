@@ -1,4 +1,7 @@
 {% extends 'main.html.twig' %}
+{% block pageTitle %}
+  <title>Grid</title>
+{% endblock pageTitle %}
 {% block content %}
 
   <h2>Точки останова</h2>
@@ -12,7 +15,7 @@
   </ul>
 
   <h2>Контейнеры</h2>
-
+  <small>Ограничивают размер сетки и выравнивают ее по центру</small>
   <div class="container" style="border: 1px solid black">
     Контейнер который меняет ширину в каждой точке останова, максимальный размер 1320
   </div>
@@ -25,4 +28,21 @@
   <div class="container-xxl bg-light">Расширяемся с xll</div>
 
   <div class="container-fluid" style="border: 1px solid black">Вся ширина области просмотра всегда</div>
+
+  <h2>Ряд</h2>
+  <small>Группирует в себе колонки</small>
+
+  <div class="container">
+      <div class="row">
+      </div>
+  </div>
+
+  <h2>Колонки сетки</h2>
+
+  <div class="container">
+    <div class="row">
+      <div class="col my-col">123</div>
+    </div>
+  </div>
+
 {% endblock %}
