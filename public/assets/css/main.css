@@ -6510,6 +6510,10 @@ fieldset:disabled .btn {
   visibility: hidden !important;
 }
 
+.my-col {
+  background-color: #0d6efd;
+}
+
 @media (min-width: 576px) {
   .container-sm,
   .container {

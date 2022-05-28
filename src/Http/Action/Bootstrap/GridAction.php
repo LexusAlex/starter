@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Starter\Http\Action;
+namespace Starter\Http\Action\Bootstrap;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
