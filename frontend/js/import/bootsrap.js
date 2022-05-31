@@ -1,3 +1,4 @@
+/*
 import Alert from '../../../node_modules/bootstrap/js/dist/alert'
 import BaseComponent from '../../../node_modules/bootstrap/js/dist/base-component'
 import Button from '../../../node_modules/bootstrap/js/dist/button'
@@ -11,5 +12,10 @@ import ScrollSpy from '../../../node_modules/bootstrap/js/dist/scrollspy'
 import Tab from '../../../node_modules/bootstrap/js/dist/tab'
 import Toast from '../../../node_modules/bootstrap/js/dist/toast'
 import Tooltip from '../../../node_modules/bootstrap/js/dist/tooltip'
+*/
+//import * as bootstrap from "../../../node_modules/bootstrap/dist/js/bootstrap";
+bootstrap = require('../../../node_modules/bootstrap/dist/js/bootstrap.js');
+//import { Tooltip } from '../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
+
 
 
