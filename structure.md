@@ -315,8 +315,9 @@ test
 2. Дизайн на bootstrap без лишних изначальных заморочек
 3. Писать тесты ко все написанному функционалу
 4. Написать обработку ошибок для всех основных кодов в errorHandler
-5. Сделать отдельную страницу bootstap tookit
+5. Сделать отдельную страницу bootstap tookit (http://127.0.0.1/bootstrap/) или написать статью про каждый компонент
 6. Разобраться с обработкой url в twig
+7. Разобраться с Package webmozart/path-util is abandoned, you should avoid using it. Use symfony/filesystem instead.
 
 #### Дизайн
 

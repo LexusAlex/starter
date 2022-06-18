@@ -1,6 +1,7 @@
 {
     "name": "lexusalex/starter",
     "type": "project",
+    "description": "this is starter",
     "license": "MIT",
     "config": {
         "process-timeout": 0,
