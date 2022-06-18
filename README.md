@@ -19,14 +19,14 @@
 
 ### production
 
-- php 8.1.6 (11.05.2022) [https://github.com/php/php-src/tags](https://github.com/php/php-src/tags)
-- composer 2.3.5 (13.04.2022) [https://github.com/composer/composer/tags](https://github.com/composer/composer/tags)
+- php 8.1.7 (07.06.2022) [https://github.com/php/php-src/tags](https://github.com/php/php-src/tags)
+- composer 2.3.7 (06.06.2022) [https://github.com/composer/composer/tags](https://github.com/composer/composer/tags)
 - nginx 1.21.6 (25.01.2022) [https://github.com/nginx/nginx/tags](https://github.com/nginx/nginx/tags)
 - mysql 8.0.29 (08.04.2022) [https://github.com/mysql/mysql-server/tags](https://github.com/mysql/mysql-server/tags)
 
 ### development
 
-- postgresql 14.3 (10.05.2022) [https://github.com/postgres/postgres/tags](https://github.com/postgres/postgres/tags)
+- postgresql 14.4 (13.06.2022) [https://github.com/postgres/postgres/tags](https://github.com/postgres/postgres/tags)
 
 ## Initialization| commands
 
@@ -39,8 +39,8 @@ make docker-up-mysql # поднять контейнеры с бд mysql
 make docker-up-postgres # поднять контейнеры с бд postgres
 make docker-up-db # поднять контейнер со всеми базами данных
 make docker-down # остановить контейнеры
-make backend-composer-outdated # проверить обновления для пакетов composer
-make backend-check-version-soft # версии ПО запущенного в docker контейнере
+make composer-outdated # проверить обновления для пакетов composer
+make check-version-soft # версии ПО запущенного в docker контейнере
 ```
 
 ## Structure
