@@ -21,6 +21,6 @@ final class HomeAction implements RequestHandlerInterface
 
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        return new TwigResponse('index.html.twig', $this->environment, []);
+        return new TwigResponse('pages/index.html.twig', $this->environment, []);
     }
 }

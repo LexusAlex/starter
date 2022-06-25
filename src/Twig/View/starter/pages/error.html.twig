@@ -1,11 +1,11 @@
 {% extends 'main.html.twig' %}
 {% block content %}
   <div class="col-lg-8 mx-auto p-3 py-md-5">
-    {% include 'header.html.twig' %}
+    {% include 'part/header.html.twig' %}
     <main>
       <h1 class="display-1 text-center">{{ code }}</h1>
       <p class="text-center">{{ message }}</p>
     </main>
-    {% include 'footer.html.twig' %}
+    {% include 'part/footer.html.twig' %}
   </div>
 {% endblock %}
