@@ -25,7 +25,7 @@ final class TwigResponseTest extends TestCase
         /** @var Environment $twig */
         $twig = $container->get('Twig\Environment');
 
-        $response = new TwigResponse('index.html.twig', $twig);
+        $response = new TwigResponse('pages/index.html.twig', $twig);
 
         self::assertEquals('text/html', $response->getHeaderLine('Content-Type'));
         self::assertEquals(200, $response->getStatusCode());

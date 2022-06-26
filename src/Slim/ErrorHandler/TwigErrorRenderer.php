@@ -20,9 +20,9 @@ final class TwigErrorRenderer implements ErrorRendererInterface
     public function __invoke(Throwable $exception, bool $displayErrorDetails): string
     {
         if (http_response_code() === 500) {
-            return $this->environment->render('error.html.twig', ['code' => 500, 'message' => 'Internal Server Error']);
+            return $this->environment->render('pages/error.html.twig', ['code' => 500, 'message' => 'Internal Server Error']);
         }
 
-        return $this->environment->render('error.html.twig', ['code' => $exception->getCode(), 'message' => $exception->getMessage()]);
+        return $this->environment->render('pages/error.html.twig', ['code' => $exception->getCode(), 'message' => $exception->getMessage()]);
     }
 }
