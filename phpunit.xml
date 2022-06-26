@@ -17,6 +17,7 @@
             <directory>src/Monolog/Test</directory>
             <directory>src/Slim/Test</directory>
             <directory>src/Http/Test</directory>
+            <directory>src/Authentication/Test</directory>
             <directory>tests</directory>
         </testsuite>
         <testsuite name="functional">
@@ -39,6 +40,9 @@
         </testsuite>
         <testsuite name="http">
             <directory>src/Http/Test</directory>
+        </testsuite>
+        <testsuite name="authentication">
+            <directory>src/Authentication/Test</directory>
         </testsuite>
     </testsuites>
 </phpunit>

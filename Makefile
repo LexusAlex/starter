@@ -63,6 +63,8 @@ test-slim:
 	docker-compose run --rm backend-php-cli composer test-slim
 test-http:
 	docker-compose run --rm backend-php-cli composer test-http
+test-authentication:
+	docker-compose run --rm backend-php-cli composer test-authentication
 # проверка версий ПО docker
 check-version-soft:
 	docker-compose run --rm backend-php-cli bash -c 'php --version && composer --version'

@@ -362,3 +362,12 @@ https://github.com/odan/slim4-skeleton/blob/master/config/routes.php
 #### Console
 
 docker-compose run --rm backend-php-cli composer require symfony/console
+
+### Проектирование функционала
+
+1. Определение, что нужно сделать (Регистрация пользователей)
+2. Определение команд (Регистрация по email) 
+3. В команду сразу закладываем ее бизнес логику с валидатором docker-compose run --rm backend-php-cli composer require symfony/validator
+4. Команда это DTO и ее обработчик
+5. Пишем сущность User - это глобальный user docker-compose run --rm backend-php-cli composer require ramsey/uuid
+6. Id - это тип сущности User, пишем тесты сразу

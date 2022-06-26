@@ -9,9 +9,6 @@ use Twig\TwigFunction;
 
 final class TwigUrlExtension extends AbstractExtension
 {
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return 'slim';
@@ -27,7 +24,7 @@ final class TwigUrlExtension extends AbstractExtension
         ];
     }
 
-    public function getBasePath(string $uri, array $params = []) : string
+    public function getBasePath(string $uri, array $params = []): string
     {
         return ($uri ? '/' . $uri : '')
             . ($params ? '?' . http_build_query($params) : '');
