@@ -20,8 +20,8 @@
 ### production
 
 - php 8.1.7 (07.06.2022) [https://github.com/php/php-src/tags](https://github.com/php/php-src/tags)
-- composer 2.3.7 (06.06.2022) [https://github.com/composer/composer/tags](https://github.com/composer/composer/tags)
-- nginx 1.21.6 (25.01.2022) [https://github.com/nginx/nginx/tags](https://github.com/nginx/nginx/tags)
+- composer 2.3.8 (01.07.2022) [https://github.com/composer/composer/tags](https://github.com/composer/composer/tags)
+- nginx 1.23.0 (21.06.2022) [https://github.com/nginx/nginx/tags](https://github.com/nginx/nginx/tags)
 - mysql 8.0.29 (08.04.2022) [https://github.com/mysql/mysql-server/tags](https://github.com/mysql/mysql-server/tags)
 
 ### development
