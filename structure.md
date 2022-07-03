@@ -370,4 +370,6 @@ docker-compose run --rm backend-php-cli composer require symfony/console
 3. В команду сразу закладываем ее бизнес логику с валидатором docker-compose run --rm backend-php-cli composer require symfony/validator
 4. Команда это DTO и ее обработчик
 5. Пишем сущность User - это глобальный user docker-compose run --rm backend-php-cli composer require ramsey/uuid
-6. Id - это тип сущности User, пишем тесты сразу
+6. Id - это тип сущности User, пишем тесты сразу к нему
+7. Email - это тоже тип сущности User
+8. Token - токен с истекающим временем
